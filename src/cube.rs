@@ -1,6 +1,6 @@
 static CUBE_WIDTH: f64 = 10.0;
 
-struct Angles {
+pub struct Angles {
     a: f64,
     b: f64,
     c: f64,
@@ -25,7 +25,7 @@ impl Angles {
             - i * self.b.cos() * self.c.sin()
     }
 
-    fn calculate_z(&self, i: f64, j: f64, k: f64) -> f64 {
+    pub fn calculate_z(&self, i: f64, j: f64, k: f64) -> f64 {
         k * self.a.cos() * self.b.cos() - j * self.a.sin() * self.b.cos() + i * self.b.sin()
     }
 }
